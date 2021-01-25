@@ -1,0 +1,122 @@
+﻿*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham 'Arial Rounded MT';
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('A.C.D.F. Logo.png');
+    background-size: cover;
+}
+
+.container {
+    max-height: 50%;
+    max-width: 60%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px;
+    align-self: center;
+    text-align: center;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    background-color: black;
+    border: 1px, solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+}
+
+.button:hover{
+    border-color: gray;
+}
+
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 15%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 0; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+  }
+
+  .sidenav h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+  }
+
+  .collapsible {
+    background-color: rgb(113, 174, 212);
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+
+  .active, .collapsible:hover {
+    background-color: #ccc;
+  }
+
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+
+  .content {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .collapsible:before {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .container2{
+    max-height: 60%;
+    max-width: 20%;
+    padding: 10px;
+    text-align: center;
+    justify-self: right;
+    align-self:flex-end;
+  }
+  
+  .button2{
+    background-color: black;
+    border: 1px, solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+}

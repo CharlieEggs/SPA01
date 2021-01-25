@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,
+    initial-scale-1.0" />
+    <link href="Style.css" rel="stylesheet" />
+    <script defer src="Game.js"></script>
+    <title>Text Adventure</title>
+</head>
+
+<body>
+    <div class="sidenav">
+        <h1>COMP1004 Charlie Eggs A.C.D.F.</h1>
+        <button type="button" class="collapsible" style="margin-bottom: 10px">About A.C.D.F.</button>
+        <div class="content"style="margin-bottom: 10px">
+          <p>A.C.D.F means Agent of the Control Defence Force. They are charged with the protection of the earth through more...
+              clandestine operations. During this game you will be evaluated for your suitability to become an A.C.D.F. where upon ending
+              the game you will be accpeted into the organisation or you will be removed.
+          </p>
+        </div> 
+        <button type="button" class="collapsible" style="margin-bottom: 10px">How to play the game</button>
+        <div class="content"style="margin-bottom: 10px">
+          <p>
+            The game is simply a text adventure where you will progress by selecting the options you prefer, from choosing your equipment
+            to choosing what kind of agent you want to be. Choose carefully.
+          </p>
+        </div>
+        <button class="button2" onclick="myFunction()">Toggle Music</button>
+    </div>
+    <div class="container">
+      <!-- <img id="image" src="A.C.D.F. Logo.png" height="200" width="200"/> -->
+        <div id="text">Text</div>
+        <div id="option-buttons" class="button-grid" onclick="changeImage()">
+            <button class="button" >Option 1</button>
+            <button class="button" >Option 2</button>
+            <button class="button" >Option 3</button>
+            <button class="button" >Option 4</button>
+        </div>
+    </div>
+</body>
+</html>
