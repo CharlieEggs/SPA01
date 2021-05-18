@@ -10,28 +10,21 @@
 </head>
 
 <body>
+  <div class="splash"> 
+    <p class="line anim-typewriter">Welcome to the C.D.F. Agent. Click to continue</p>
+ </div>
+  <audio id="my_audio" src="typewriter.mp3"></audio>
+  <audio id="myAudio" src="CinematicThriller.mp3" preload="auto">
+  </audio>
     <div class="sidenav">
-        <h1>COMP1004 Charlie Eggs A.C.D.F.</h1>
-        <button type="button" class="collapsible" style="margin-bottom: 10px">About A.C.D.F.</button>
-        <div class="content"style="margin-bottom: 10px">
-          <p>A.C.D.F means Agent of the Control Defence Force. They are charged with the protection of the earth through more...
-              clandestine operations. During this game you will be evaluated for your suitability to become an A.C.D.F. where upon ending
-              the game you will be accpeted into the organisation or you will be removed.
-          </p>
-        </div> 
-        <button type="button" class="collapsible" style="margin-bottom: 10px">How to play the game</button>
-        <div class="content"style="margin-bottom: 10px">
-          <p>
-            The game is simply a text adventure where you will progress by selecting the options you prefer, from choosing your equipment
-            to choosing what kind of agent you want to be. Choose carefully.
-          </p>
-        </div>
-        <button class="button2" onclick="myFunction()">Toggle Music</button>
+        <button class="button2" onclick="togglePlay()">Toggle Music</button>
+    </div>
+    <div class="image">
+      <img id="image" src="A.C.D.F.LogoSmall.png" height="200" width="200"/>
     </div>
     <div class="container">
-      <img id="image" src="A.C.D.F. Logo.png" height="200" width="200"/>
         <div id="text">Text</div>
-        <div id="option-buttons" class="button-grid" onclick="playAudio('sound_ex_machina_Button_Click.mp3'), changeImage()">
+        <div id="option-buttons" class="button-grid" onclick="playAudio('button-click-sound-effect.mp3')">
             <button class="button" >Option 1</button>
             <button class="button" >Option 2</button>
             <button class="button" >Option 3</button>

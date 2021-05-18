@@ -1,4 +1,28 @@
-﻿const textEl = document.getElementById('text')
+﻿var myAudio = document.getElementById("myAudio");
+var isPlaying = false;
+
+function togglePlay() {
+  isPlaying ? myAudio.pause() : myAudio.play();
+};
+
+myAudio.onplaying = function() {
+  isPlaying = true;
+};
+myAudio.onpause = function() {
+  isPlaying = false;
+};
+
+window.onload = function() {
+    document.getElementById("my_audio").play();
+}
+
+const splash = document.querySelector('.splash');
+
+document.addEventListener("click", function(){
+    splash.classList.add("display-none")
+})
+
+const textEl = document.getElementById('text')
 const opBtnEl = document.getElementById('option-buttons')
 const healthEl = document.getElementById('health-count')
 
