@@ -110,7 +110,7 @@ function playAudio(url) {
 const txtNodes = [
     {
         id: 100,
-        text: 'Hello Agent! Welcome to the A.C.D.F. Training Program. This program will take you through various training scenarios that will test your wits, stealth abilities and foresight. You will be taken through a day in the life of one of our agents on one of there training days so please make sure you make every choice carefully. Please click "Begin" to start the scenario.',
+        text: 'Hello Agent! Welcome to the A.C.D.F. Training Program. \n\nThis program will take you through various training scenarios that will test your wits, stealth abilities and foresight. You will be taken through a day in the life of one of our agents on one of there training days so please make sure you make every choice carefully. \n\nPlease click "Begin" to start the scenario.',
         options: [
             {
                 text: 'Begin',
@@ -120,7 +120,7 @@ const txtNodes = [
     },
     {
         id: 1,
-        text: 'Today is the day you have waited your whole life for, Agents of the Control & Defence Force Training, or A.C.D.F. Training for short. The late winter sun climbed just above the horizon giving the room a warm orange glow, it seemed a little brighter today. The alarm you had been awaiting for the last 10 minutes beeps into life',
+        text: 'Today is the day you have waited your whole life for, Agents of the Control & Defence Force Training, or A.C.D.F. Training for short. \n\nThe late winter sun climbed just above the horizon giving the room a warm orange glow, it seemed a little brighter today. \n\nThe alarm you had been awaiting for the last 10 minutes beeps into life.',
         options: [
             {
                 text: 'Silence the alarm and eagerly jump out of bed. Prepare for your day.',
@@ -344,5 +344,4 @@ const txtNodes = [
         
     },
 ]
-
 StartGame()
