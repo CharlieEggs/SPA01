@@ -64,53 +64,16 @@ function optSelect(option) {
     curTextNode(nextTextNodeID)
 }
 
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-} 
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
-  });
-}
-
 function changeImage()
 {
     var img = document.getElementById("image");
     img.src="gh-best-alarm-clocks-social-1594392770.png";
 }
 
-function myFunction() {
-    var x = document.getElementById("myDIV");
-  } 
-
-
-
-function playAudio(url) {
-    new Audio(url).play();
-  }  
-
 const txtNodes = [
     {
         id: 100,
-        text: 'Hello Agent! Welcome to the A.C.D.F. Training Program. \n\nThis program will take you through various training scenarios that will test your wits, stealth abilities and foresight. You will be taken through a day in the life of one of our agents on one of there training days so please make sure you make every choice carefully. \n\nPlease click "Begin" to start the scenario.',
+        text: 'Hello Agent! Welcome to the A.C.D.F. Training Program. \n\nPlease click "Begin" to start the scenario.',
         options: [
             {
                 text: 'Begin',
@@ -134,7 +97,7 @@ const txtNodes = [
     },
     {
         id: 2,
-        text: 'After waiting for your assigned 8:00am time slot for what seemed like an eternity, you arrive at the C.D.F. Training Centre. The building is glistening white with no particularly obvious markings apart from the logo on the doors; The grounds are teaming with life all around - which seems counter productive for a secret agency to your untrained eyes.',
+        text: 'After waiting for your assigned 8:00am time slot for what seemed like an eternity, you arrive at the C.D.F. Training Centre. \n\nThe building is glistening white with no particularly obvious markings apart from the logo on the doors; The grounds are teaming with life all around - which seems counter productive for a secret agency to your untrained eyes.',
         options: [
             {
                 text: 'You prepare for you test by making your way into the reception',
@@ -150,7 +113,7 @@ const txtNodes = [
     },
     {
         id: 3,
-        text: 'The receptionist directs you to training room B from behind a large curved marble desk that you feel is slightly too high for her. The room is dark and cold, being made of steel panels you expect nothing different, in the center is a table with a sign saying "Please choose your set of equipment for this scenario" accompanied with 2 sets of C.D.F. equipment',
+        text: 'The receptionist directs you to training room B from behind a large curved marble desk. \n\nThe room is dark and cold, being made of steel panels you expect nothing different, in the center is a table with a sign saying "Please choose your set of equipment for this scenario" accompanied with 2 sets of C.D.F. equipment',
         options: [
             {
                 text: 'You make your way to the table and choose the Signal Jammer, the Night Vision Goggles and the Baton',
@@ -160,6 +123,7 @@ const txtNodes = [
             },
             {
                 text: 'You make your way to the table and choose choose the Silenced Pistol, the Garrote Wire and the Sleeping Gas',
+                img: "A.C.D.F.LogoSmall.png",
                 //requiredState: (curState) => curState.equipment,
                 setState: { silencedPistol : true , garroteWire : true, sleepingGas : true},
                 nextText: 4

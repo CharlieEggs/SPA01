@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,
+    initial-scale-1.0" />
+    <link href="Style.css" rel="stylesheet" />
+    <script defer src="MainScreen.js"></script>
+    <title>Agents of the C.D.F.</title>
+</head>
+
+<body>
+    <audio id="my_audio" src="CinematicThriller.mp3" preload="auto"></audio>
+    <div class="Title"> 
+        <h1 class="Welcome">Welcome to the C.D.F.</h1>
+        <div id="option-buttons" class="button-grid2" onclick="playAudio('button-click-sound-effect.mp3')">
+            <button class="button" onclick="location.href='Index.html';">Play</button>
+            <button class="button" onclick="location.href='Info.html';">Info</button>
+            <button class="button" onclick="togglePlay()">Toggle Music</button>
+        </div>
+    </div>
+    <div class="startLogo">
+        <img id="image" src="A.C.D.F.LogoSmall.png" height="500" width="500"/>
+    </div>
+</body>
+</html>
