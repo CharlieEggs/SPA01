@@ -209,3 +209,10 @@ body {
     position: absolute;
     right: 200px;
 }
+
+.Bimage{
+    align-self: center;
+    z-index: -10;
+    position: absolute;
+    right: 0px;
+}

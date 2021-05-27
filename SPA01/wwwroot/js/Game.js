@@ -66,14 +66,16 @@ function optSelect(option) {
 
 function changeImage()
 {
-    var img = document.getElementById("image");
-    img.src="gh-best-alarm-clocks-social-1594392770.png";
+    if(document.getElementById('backimage').src = "A.C.D.F. Logo.png"){
+        document.getElementById('backimage').src="AlarmClock.png";
+    }
 }
 
 const txtNodes = [
     {
         id: 100,
         text: 'Hello Agent! Welcome to the A.C.D.F. Training Program. \n\nPlease click "Begin" to start the scenario.',
+        img: "gh-best-alarm-clocks-social-1594392770.png",
         options: [
             {
                 text: 'Begin',
@@ -132,7 +134,7 @@ const txtNodes = [
     },
     {
         id: 4,
-        text: 'Once you organise the equpment into your pockets, thankful that you chose your trousers with larger tactical pokcets, a voice booms over the intercom, "Welcome Trainees, you all know why you are here and I will be honest these tests will be grueling and time consuming, but you have trained hard and I am sure you will succeed.". The voice made you feel only slightly more confident as a panel at one of the room slid open from below.',
+        text: 'Once you organise the equpment into your pocketss a voice booms over the intercom. \n\n "Welcome Trainees, you all know why you are here and I will be honest these tests will be grueling and time consuming, but you have trained hard and I am sure you will succeed.". \n\nThe voice made you feel only slightly more confident as a panel at one of the room slid open from below.',
 
         options: [
             {
@@ -147,7 +149,7 @@ const txtNodes = [
     },
     {
         id: 5,
-        text: 'The same voice booms over the intercom, a little more frustrated this time, "Please go ahead through the opening... the others have already gone through".',
+        text: 'The same voice booms over the intercom, a little more frustrated this time. \n\n"Please go ahead through the opening... the others have already gone through".',
         options: [
             {
                 text: 'You hurry through the opening, a little more redfaced than you had hoped this early on.',
@@ -159,7 +161,7 @@ const txtNodes = [
     },
     {
         id: 6,
-        text: 'You wake up in a fright with the orange glow now the bright white of daylight as you realise a few minutes turned into 50 and you have less time than you would have like to make it to the C.D.F. Training Facility.',
+        text: 'You wake up in a fright with the orange glow now the bright white of daylight. \n\nYou realise a few minutes turned into 50 and you have less time than you would have like to make it to the C.D.F. Training Facility.',
         options: [
             {
                 text: 'Put on your tactical clothing and rush to the Facility, arriving to disappointed looks and feeling a little more sweaty than you had intended',
@@ -170,7 +172,7 @@ const txtNodes = [
     },
     {
         id: 7,
-        text: 'The room you enter is dark and feels confined, but echoes with each step you take making you think it probably was not as confined as you think. You remember your training and calmly think about your options here.',
+        text: 'The room you enter is dark and feels confined, but echoes with each step you take making you think it probably was not as confined as you think. \n\nYou remember your training and calmly think about your options here.',
         options: [
             {
                 text: 'You need to catch up to the other trainees, plow ahead to impress your overseer.',
@@ -196,7 +198,7 @@ const txtNodes = [
     },
     {
         id: 8,
-        text: 'The room seems to stretch further and further into the dark, seemingly going on forever, and walk forward until you hear a very quiet and careful footstep from around the next corner',
+        text: 'The room seems to stretch further and further into the dark, seemingly going on forever. \n\nYou walk forward until you hear a very quiet and careful footstep from around the next corner',
         options: [
             {
                 text: 'You place yourself near the corner ready to combat whoever appears',
@@ -269,7 +271,7 @@ const txtNodes = [
             {
                 text: 'You find a pair of handcuffs on the gaurd which may be useful.',
                 setState: { handcuffs: true },
-                nextText: 13
+                nextText: 15
             },
         ]
         
@@ -277,6 +279,39 @@ const txtNodes = [
     {
         id: 13,
         text: 'The shadowy figure of a man turns the corner, moving with a ghost like glide in the darkness.',
+        options: [
+            {
+                text: 'You fire your weapon.',
+                requiredState: (curState) => curState.gunReady,
+                nextText: 15
+            },
+            {
+                text: 'You stay as quiet as possible and slow your breathing.',
+                requiredState: (curState) => curState.nook,
+                nextText: 13
+            },
+            {
+                text: 'You lunge for the figure, hoping to subdue it.',
+                nextText: 14
+            },
+        ]
+        
+    },
+    {
+        id: 14,
+        text: 'The attack succeeds, albeit at some cost as the guard got in a few punches of his own, you search the unconsious guard for anything useful.',
+        options: [
+            {
+                text: 'You find a pair of handcuffs on the gaurd which may be useful.',
+                setState: { handcuffs: true },
+                nextText: 15
+            },
+        ]
+        
+    },
+    {
+        id: 15,
+        text: 'The weapon fires. \n\nThe guard falls to the ground, and the sound of multiple heavy footsteps appears.',
         options: [
             {
                 text: 'You fire your weapon.',
@@ -290,19 +325,7 @@ const txtNodes = [
             },
             {
                 text: 'You lunge for the figure, hoping to subdue it.',
-                nextText: 13
-            },
-        ]
-        
-    },
-    {
-        id: 14,
-        text: 'The attack succeeds, albeit at some cost as the guard got in a few punches of his own, you search the unconsious guard for anything useful.',
-        options: [
-            {
-                text: 'You find a pair of handcuffs on the gaurd which may be useful.',
-                setState: { handcuffs: true },
-                nextText: 13
+                nextText: 14
             },
         ]
         

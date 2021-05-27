@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width,
     initial-scale-1.0" />
     <link href="Style.css" rel="stylesheet" />
-    <script defer src="Game.js"></script>
+    <script defer src="MainScreen.js"></script>
     <title>Agents of the C.D.F.</title>
 </head>
 
 <body>
+    <audio id="my_audio" src="CinematicThriller.mp3" preload="auto"></audio>
     <div class="Title"> 
         <h1 class="Welcome">Information</h1>
         <h3 class="Welcome">
@@ -35,6 +36,7 @@
         </h4>
         <div id="option-buttons" class="button-grid2" onclick="playAudio('button-click-sound-effect.mp3')">
             <button class="button" onclick="location.href='MainScreen.html';">Back</button>
+            <button class="button" onclick="togglePlay()">Toggle Music</button>
         </div>
 </body>
 </html>
